@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React, { useState } from 'react';
-import CartCardRenderer from '../components/cart/CartCardRenderer';
+import { StyleSheet, Text } from 'react-native';
+import React from 'react';
+import CartCardRenderer from '@components/cart/CartCardRenderer';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import CheckOutCart from '../components/cart/CheckOutCart';
+import CheckOutCart from '@components/cart/CheckOutCart';
 
 const Cart = () => {
   return (
