@@ -3,9 +3,10 @@ import React from 'react';
 
 interface ICtaButtonProps {
   onClick: () => void;
+  title: string;
 }
 
-const CtaButton = ({ onClick }: ICtaButtonProps) => {
+const CtaButton = ({ onClick, title }: ICtaButtonProps) => {
   return (
     <TouchableOpacity
       style={{
@@ -20,10 +21,10 @@ const CtaButton = ({ onClick }: ICtaButtonProps) => {
           textAlign: 'center',
           color: 'white',
           fontWeight: '500',
-          fontSize: 16,
+          fontSize: 14,
         }}
       >
-        view ingredients
+        {title}
       </Text>
     </TouchableOpacity>
   );

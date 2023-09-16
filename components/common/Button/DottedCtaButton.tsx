@@ -3,9 +3,10 @@ import React from 'react';
 
 interface IDottedCtaButtonProps {
   onClick: () => void;
+  title: string;
 }
 
-const DottedCtaButton = ({ onClick }: IDottedCtaButtonProps) => {
+const DottedCtaButton = ({ onClick, title }: IDottedCtaButtonProps) => {
   return (
     <TouchableOpacity
       style={{
@@ -23,10 +24,10 @@ const DottedCtaButton = ({ onClick }: IDottedCtaButtonProps) => {
           textAlign: 'center',
           color: '#cc465f',
           fontWeight: '500',
-          fontSize: 16,
+          fontSize: 14,
         }}
       >
-        view ingredients
+        {title}
       </Text>
     </TouchableOpacity>
   );
