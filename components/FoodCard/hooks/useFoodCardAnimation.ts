@@ -49,7 +49,6 @@ const useFoodCardAnimation = (props: IFoodCardProps) => {
       item.inputXRange,
       [0, 0.3, 0]
     );
-
     const interpolatedRotation = interpolate(
       scrollValue.value,
       item.inputXRange,
