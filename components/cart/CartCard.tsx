@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
-import Animated, { FadeInRight, FadeOutRight } from 'react-native-reanimated';
+import Animated, { FadeInRight } from 'react-native-reanimated';
 import SelectedImage from '../common/Images/SelectedImage';
 import PriceAAndQuantity from '../common/GroupText/PriceAndQuantity';
 import { IIngredientsWithSelectionStatus } from '../Ingredients/types/interface';
