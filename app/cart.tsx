@@ -11,16 +11,7 @@ const Cart = () => {
         flex: 1,
       }}
     >
-      <Text
-        style={{
-          marginHorizontal: 10,
-          fontSize: 24,
-          fontWeight: 'bold',
-          marginVertical: 20,
-        }}
-      >
-        My Orders
-      </Text>
+      <Text style={styles.cartText}>My Orders</Text>
       <CartCardRenderer />
       <CheckOutCart />
     </SafeAreaView>
@@ -30,9 +21,10 @@ const Cart = () => {
 export default Cart;
 
 const styles = StyleSheet.create({
-  cartContainer: {
-    padding: 10,
-    flexDirection: 'row',
-    alignItems: 'center',
+  cartText: {
+    marginHorizontal: 10,
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginVertical: 20,
   },
 });
