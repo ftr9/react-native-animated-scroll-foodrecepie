@@ -3,3 +3,7 @@ export interface IIngredients {
   name: string;
   quantity: string;
 }
+
+export interface IIngredientsWithSelectionStatus extends IIngredients {
+  isSelected: boolean;
+}
