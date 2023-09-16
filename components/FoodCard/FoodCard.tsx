@@ -3,7 +3,7 @@ import React from 'react';
 import Animated from 'react-native-reanimated';
 import { IFoodCardProps } from './types/interface';
 import useFoodCardAnimation from './hooks/useFoodCardAnimation';
-import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../constants/Resolution';
+import { SCREEN_HEIGHT, SCREEN_WIDTH } from '@constants/Resolution';
 
 const FoodCard = (props: IFoodCardProps) => {
   const { item } = props;
