@@ -1,14 +1,12 @@
 import { StyleSheet, View, ScrollView, Dimensions } from 'react-native';
 import React from 'react';
 import Animated, { FadeInDown, FadeOutLeft } from 'react-native-reanimated';
-import CtaButton from '../common/Button/CtaButton';
-import { SCREEN_HEIGHT } from '../../constants/Resolution';
+import { SCREEN_HEIGHT } from '@constants/Resolution';
 import DottedCtaButton from '../common/Button/DottedCtaButton';
-import { IIngredients } from './types/interface';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import IngredientsCard from './IngredientsCard';
 import useInredientsStore from './useIngredients.store';
-import { router, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 
 interface IIngredientsRendererProps {
   isIngredientCardVisible: boolean;
@@ -20,7 +18,7 @@ const IngredientsRenderer = ({
   setIngredientCardVisible,
 }: IIngredientsRendererProps) => {
   const router = useRouter();
-  const { ingredients, getSelectedIngredients } = useInredientsStore();
+  const { ingredients } = useInredientsStore();
   const onCloseHandle = () => {
     setIngredientCardVisible(false);
   };

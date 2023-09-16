@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
-import React, { useState } from 'react';
+import { StyleSheet } from 'react-native';
+import React from 'react';
 import Animated, { FadeInRight, FadeOutLeft } from 'react-native-reanimated';
 import { Checkbox } from 'expo-checkbox';
 import { IIngredientsWithSelectionStatus } from './types/interface';
 import useInredientsStore from './useIngredients.store';
-import SelectedImage from '../common/Images/SelectedImage';
-import PriceAndQuantity from '../common/GroupText/PriceAndQuantity';
+import SelectedImage from '@components/common/Images/SelectedImage';
+import PriceAndQuantity from '@components/common/GroupText/PriceAndQuantity';
 
 interface IIngredientsCardProps {
   item: IIngredientsWithSelectionStatus;
