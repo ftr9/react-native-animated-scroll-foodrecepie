@@ -1,37 +1,31 @@
-import {
-  StyleSheet,
-  Dimensions,
-  View,
-  Image,
-  Text,
-  ImageBackground,
-} from 'react-native';
-import React from 'react';
-import { useSharedValue, withTiming } from 'react-native-reanimated';
+import { StyleSheet, View, Text } from 'react-native';
+import React, { useState } from 'react';
+import Animated, { FadeIn } from 'react-native-reanimated';
 import FoodCardRenderer from '../components/FoodCard/FoodCardRenderer';
 import IngredientsRenderer from '../components/Ingredients/IngredientsRenderer';
 import CtaButton from '../components/common/Button/CtaButton';
 import { SCREEN_HEIGHT } from '../constants/Resolution';
 
 const MainPage = () => {
-  const scrollViewYPosValue = useSharedValue(-SCREEN_HEIGHT / 2);
+  const [isIngredientCardVisible, setIngredientCardVisible] = useState(false);
 
   const ctaBtnClickHandle = () => {
-    scrollViewYPosValue.value = withTiming(0, {
-      duration: 500,
-    });
+    setIngredientCardVisible(true);
   };
 
   return (
-    <View style={styles.mainPageContainer}>
+    <Animated.View
+      entering={FadeIn.duration(500)}
+      style={styles.mainPageContainer}
+    >
       <FoodCardRenderer />
-      <IngredientsRenderer scrollViewYPosValue={scrollViewYPosValue} />
+
       <View
         style={{
           marginHorizontal: 20,
         }}
       >
-        <CtaButton onClick={ctaBtnClickHandle} />
+        <CtaButton title="View Ingredients" onClick={ctaBtnClickHandle} />
         <Text
           style={{
             textAlign: 'center',
@@ -40,10 +34,17 @@ const MainPage = () => {
             marginVertical: 30,
           }}
         >
-          Swipe To See Recepie
+          Swipe To See More
         </Text>
       </View>
-    </View>
+
+      {isIngredientCardVisible && (
+        <IngredientsRenderer
+          isIngredientCardVisible
+          setIngredientCardVisible={setIngredientCardVisible}
+        />
+      )}
+    </Animated.View>
   );
 };
 
