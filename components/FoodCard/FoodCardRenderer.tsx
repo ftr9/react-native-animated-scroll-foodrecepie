@@ -15,7 +15,7 @@ const foods: IFoods[] = [
   {
     name: 'Caesar salad',
     price: 150,
-    image: require('../../assets/images/food3.png'),
+    image: require('@assets/images/food3.png'),
     inputXRange: [-360, 0, 360],
     outputYRange: OUTPUT_Y_RANGE,
     ouputRotationRange: OUTPUT_ROTATION_RANGE,
@@ -24,7 +24,7 @@ const foods: IFoods[] = [
   {
     name: 'Pineapple Greek Salad',
     price: 250,
-    image: require('../../assets/images/food4.png'),
+    image: require('@assets/images/food4.png'),
     inputXRange: [0, 360, 720],
     outputYRange: OUTPUT_Y_RANGE,
     ouputRotationRange: OUTPUT_ROTATION_RANGE,
@@ -33,7 +33,7 @@ const foods: IFoods[] = [
   {
     name: 'Veal Steak & Potato',
     price: 450,
-    image: require('../../assets/images/food5.png'),
+    image: require('@assets/images/food5.png'),
     inputXRange: [360, 720, 1080],
     outputYRange: OUTPUT_Y_RANGE,
     ouputRotationRange: OUTPUT_ROTATION_RANGE,
@@ -42,7 +42,7 @@ const foods: IFoods[] = [
   {
     name: 'Avocado Toast & Egg',
     price: 50,
-    image: require('../../assets/images/food6.png'),
+    image: require('@assets/images/food6.png'),
     inputXRange: [720, 1080, 1440],
     outputYRange: OUTPUT_Y_RANGE,
     ouputRotationRange: OUTPUT_ROTATION_RANGE,
@@ -51,7 +51,7 @@ const foods: IFoods[] = [
   {
     name: 'Tom yum',
     price: 350,
-    image: require('../../assets/images/food7.png'),
+    image: require('@assets/images/food7.png'),
     inputXRange: [1080, 1440, 1800],
     outputYRange: OUTPUT_Y_RANGE,
     ouputRotationRange: OUTPUT_ROTATION_RANGE,
@@ -60,7 +60,7 @@ const foods: IFoods[] = [
   {
     name: 'Chipotle Lime Shrimp',
     price: 250,
-    image: require('../../assets/images/food8.png'),
+    image: require('@assets/images/food8.png'),
     inputXRange: [1440, 1800, 2160],
     outputYRange: OUTPUT_Y_RANGE,
     ouputRotationRange: OUTPUT_ROTATION_RANGE,
